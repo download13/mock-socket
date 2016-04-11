@@ -95,7 +95,7 @@ class WebSocket extends EventTarget {
     delay(function delayCallback() {
       if (server) {
         this.readyState = WebSocket.OPEN;
-        server.dispatchEvent(createEvent({ type: 'connection' }), server, this);
+        server.dispatchEvent(createEvent({ type: 'connection' }), this);
         this.dispatchEvent(createEvent({ type: 'open', target: this }));
       } else {
         this.readyState = WebSocket.CLOSED;

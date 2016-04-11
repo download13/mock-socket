@@ -142,7 +142,7 @@ var WebSocket = (function (_EventTarget) {
     (0, _helpersDelay2['default'])(function delayCallback() {
       if (server) {
         this.readyState = WebSocket.OPEN;
-        server.dispatchEvent((0, _eventFactory.createEvent)({ type: 'connection' }), server, this);
+        server.dispatchEvent((0, _eventFactory.createEvent)({ type: 'connection' }), this);
         this.dispatchEvent((0, _eventFactory.createEvent)({ type: 'open', target: this }));
       } else {
         this.readyState = WebSocket.CLOSED;
